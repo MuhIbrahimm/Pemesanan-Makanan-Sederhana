@@ -9,15 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="178c086a-cb63-4a30-9ac4-b62056d18ada" name="Changes" comment="login sederhana untuk masing masing user">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Tugas1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Restaurant.java" afterDir="false" />
+    <list default="true" id="178c086a-cb63-4a30-9ac4-b62056d18ada" name="Changes" comment="Menambahkan membuat main menjadi lebih berish, membuat beberapa kelas baru dan membuat menu sederhana untuk admin dan customer">
+      <change afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pesanan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Restaurant.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,16 +58,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Run" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -107,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680596547108</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Menambahkan membuat main menjadi lebih berish, membuat beberapa kelas baru dan membuat menu sederhana untuk admin dan customer">
+      <created>1681117993390</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681117993390</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,6 +131,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit pertama" />
     <MESSAGE value="login sederhana untuk masing masing user" />
-    <option name="LAST_COMMIT_MESSAGE" value="login sederhana untuk masing masing user" />
+    <MESSAGE value="Menambahkan membuat main menjadi lebih berish, membuat beberapa kelas baru dan membuat menu sederhana untuk admin dan customer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Menambahkan membuat main menjadi lebih berish, membuat beberapa kelas baru dan membuat menu sederhana untuk admin dan customer" />
   </component>
 </project>
