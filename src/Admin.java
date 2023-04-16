@@ -120,22 +120,32 @@ public class Admin {
     }
 
     public void deleteRestaurant() {
-        System.out.print("Masukkan ID Restoran yang akan dihapus: ");
-        String id = scanner.next();
+        int loopDelete = 1;
 
-        boolean found = false;
-        for (Restaurant restaurant : restaurants) {
-            if (restaurant.getIdRestaurant().equalsIgnoreCase(id)) {
-                restaurants.remove(restaurant);
-                System.out.println("Restoran berhasil dihapus!");
-                found = true;
-                break;
+
+        while (loopDelete == 1) {
+            System.out.print("Masukkan ID Restoran yang akan dihapus: ");
+            String id = scanner.next();
+            boolean found = false;
+            for (Restaurant restaurant : restaurants) {
+                if (restaurant.getIdRestaurant().equalsIgnoreCase(id)) {
+                    restaurants.remove(restaurant);
+                    System.out.println("====================================");
+                    System.out.println("Restoran berhasil dihapus!");
+                    found = true;
+                    break;
+                }
             }
+            if (!found) {
+                System.out.println("Restoran tidak ditemukan.");
+            }
+            System.out.println("====================================");
+            System.out.println("Hapus restaurant kembali?");
+            System.out.println("(1: Ya, 0: Tidak)");
+            loopDelete = scanner.nextInt();
+            System.out.println("====================================");
         }
-
-        if (!found) {
-            System.out.println("Restoran tidak ditemukan.");
-        }
+        menuAdmin();
     }
 
 
