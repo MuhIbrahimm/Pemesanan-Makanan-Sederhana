@@ -9,13 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="178c086a-cb63-4a30-9ac4-b62056d18ada" name="Changes" comment="menambahkan class baru, mengisi awalan class restauran dan menu, merapikan code, membuat validasi sederhana">
-      <change afterPath="$PROJECT_DIR$/src/Private.java" afterDir="false" />
+    <list default="true" id="178c086a-cb63-4a30-9ac4-b62056d18ada" name="Changes" comment="menambahkan view, add, restauran dan menu, memperbaiki class login, restaurant, dan menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681551056645</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="menambahkan view, add, restauran dan menu, memperbaiki class login, restaurant, dan menu">
+      <created>1681662884281</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681662884281</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,6 +147,7 @@
     <MESSAGE value="login sederhana untuk masing masing user" />
     <MESSAGE value="Menambahkan membuat main menjadi lebih berish, membuat beberapa kelas baru dan membuat menu sederhana untuk admin dan customer" />
     <MESSAGE value="menambahkan class baru, mengisi awalan class restauran dan menu, merapikan code, membuat validasi sederhana" />
-    <option name="LAST_COMMIT_MESSAGE" value="menambahkan class baru, mengisi awalan class restauran dan menu, merapikan code, membuat validasi sederhana" />
+    <MESSAGE value="menambahkan view, add, restauran dan menu, memperbaiki class login, restaurant, dan menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="menambahkan view, add, restauran dan menu, memperbaiki class login, restaurant, dan menu" />
   </component>
 </project>

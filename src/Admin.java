@@ -35,7 +35,7 @@ public class Admin {
                 addRestaurant();
                 break;
             case 3:
-                // hapusRestaurant();
+                deleteRestaurant();
                 break;
             case 4:
                 Login.login();
@@ -76,6 +76,8 @@ public class Admin {
         int loopRestaurant = 1, loopMenu = 1;
 
         while (loopRestaurant == 1) {
+            System.out.println("       Menambahkan Restaurant       ");
+            System.out.println("====================================");
             System.out.print("Masukkan ID Restaurant: ");
             idRestaurant = scanner.next();
             System.out.print("Masukkan Nama Restaurant: ");
@@ -83,7 +85,7 @@ public class Admin {
             System.out.print("Masukkan Alamat Restaurant: ");
             alamatRestaurant = scanner.next();
 
-            System.out.println("====================================");
+            System.out.println("\n====================================");
             System.out.println("   Menambahkan Menu ke Restaurant   ");
             System.out.println("====================================");
             while (loopMenu == 1) {
@@ -104,7 +106,6 @@ public class Admin {
             }
             restaurants.add(new Restaurant(idRestaurant, namaRestaurant, alamatRestaurant, menus));
 
-            System.out.println("====================================");
             System.out.println("Tambah data restaurant kembali?");
             System.out.println("(1: Ya, 0: Tidak)");
             loopRestaurant = scanner.nextInt();
@@ -117,5 +118,25 @@ public class Admin {
         }
         menuAdmin();
     }
+
+    public void deleteRestaurant() {
+        System.out.print("Masukkan ID Restoran yang akan dihapus: ");
+        String id = scanner.next();
+
+        boolean found = false;
+        for (Restaurant restaurant : restaurants) {
+            if (restaurant.getIdRestaurant().equalsIgnoreCase(id)) {
+                restaurants.remove(restaurant);
+                System.out.println("Restoran berhasil dihapus!");
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Restoran tidak ditemukan.");
+        }
+    }
+
 
 }
