@@ -28,11 +28,10 @@ public class Customer {
                 //buat pesanan
                 break;
             case 2:
-                //lihat restaurant
+                //lihat pesanan
                 break;
             case 3:
                 Login.login();
-                //kembali ke login
         }
     }
 }
