@@ -13,7 +13,8 @@ public class Login {
         System.out.println("====================================");
 
         if (username.equals("admin") && password.equals("admin")) {
-            Admin.admin();
+            Admin admin = new Admin();
+            admin.menuAdmin();
             //perintah masuk ke sisi admin
 
         } else if (username.equals("customer") && password.equals("customer")) {

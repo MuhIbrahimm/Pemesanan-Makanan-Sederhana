@@ -9,14 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="178c086a-cb63-4a30-9ac4-b62056d18ada" name="Changes" comment="Menambahkan membuat main menjadi lebih berish, membuat beberapa kelas baru dan membuat menu sederhana untuk admin dan customer">
-      <change afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pesanan.java" afterDir="false" />
+    <list default="true" id="178c086a-cb63-4a30-9ac4-b62056d18ada" name="Changes" comment="menambahkan class baru, mengisi awalan class restauran dan menu, merapikan code, membuat validasi sederhana">
+      <change afterPath="$PROJECT_DIR$/src/Private.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Restaurant.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +66,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Run" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -114,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681117993390</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="menambahkan class baru, mengisi awalan class restauran dan menu, merapikan code, membuat validasi sederhana">
+      <created>1681551056645</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681551056645</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +142,7 @@
     <MESSAGE value="commit pertama" />
     <MESSAGE value="login sederhana untuk masing masing user" />
     <MESSAGE value="Menambahkan membuat main menjadi lebih berish, membuat beberapa kelas baru dan membuat menu sederhana untuk admin dan customer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menambahkan membuat main menjadi lebih berish, membuat beberapa kelas baru dan membuat menu sederhana untuk admin dan customer" />
+    <MESSAGE value="menambahkan class baru, mengisi awalan class restauran dan menu, merapikan code, membuat validasi sederhana" />
+    <option name="LAST_COMMIT_MESSAGE" value="menambahkan class baru, mengisi awalan class restauran dan menu, merapikan code, membuat validasi sederhana" />
   </component>
 </project>
