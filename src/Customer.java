@@ -1,7 +1,12 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Customer {
-    public static void customer() {
+    ArrayList<Order> orders = new ArrayList<>();
+    ArrayList<Restaurant>restaurants = new ArrayList<>();
+    Scanner scanner = new Scanner(System.in);
+
+    public void menuCustomer() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("\n\n====================================");
@@ -15,7 +20,7 @@ public class Customer {
         do {
             System.out.print("Pilih menu: ");
             pilihan = scanner.nextInt();
-            if (pilihan < 1 || pilihan > 3){
+            if (pilihan < 1 || pilihan > 3) {
                 System.out.println("Pilihan tersebut tidak ada di menu");
                 System.out.println("Silakan pilih menu kembali");
                 System.out.println("====================================");
@@ -23,9 +28,9 @@ public class Customer {
         } while (pilihan < 1 || pilihan > 3);
         System.out.println("====================================");
 
-        switch (pilihan){
+        switch (pilihan) {
             case 1:
-                //buat pesanan
+                addPesanan();
                 break;
             case 2:
                 //lihat pesanan
@@ -33,6 +38,30 @@ public class Customer {
             case 3:
                 Login.login();
         }
+    }
+
+    public void addPesanan() {
+        viewRestaurant(restaurants);
+    }
+
+    public void viewRestaurant(ArrayList<Restaurant> restaurants) {
+        System.out.println("          List Restaurant           ");
+        System.out.println("====================================");
+        if (restaurants.isEmpty()) {
+            System.out.println("    List Restaurant Masih Kosong    ");
+            System.out.println("====================================");
+            System.out.println("Berikan input Untuk Kembali...");
+            scanner.next();
+            menuCustomer();
+        } else{
+            for (Restaurant restaurant : restaurants) {
+                System.out.println("ID: " + restaurant.getIdRestaurant());
+                System.out.println("Nama: " + restaurant.getNamaRestaurant());
+                System.out.println("Alamat: " + restaurant.getAlamatRestaurant() + "\n");
+            }
+        }
+        System.out.print("Pilih restaurant berdasarkan ID: ");
+        scanner.next();
     }
 }
 

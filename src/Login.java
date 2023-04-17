@@ -18,7 +18,8 @@ public class Login {
             //perintah masuk ke sisi admin
 
         } else if (username.equals("customer") && password.equals("customer")) {
-            Customer.customer();
+            Customer customer = new Customer();
+            customer.menuCustomer();
             //perintah masuk ke sisi customer
 
         } else {

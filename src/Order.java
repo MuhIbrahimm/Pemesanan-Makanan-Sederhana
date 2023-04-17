@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 
-public class Pesanan {
+public class Order {
     private String idRestaurant;
     private ArrayList<Menu> menus;
     private ArrayList<Integer> jumlahMenu;
     private double jarakAntar;
     private double totalHarga;
 
-    public Pesanan(String idRestaurant, ArrayList<Menu> menus, ArrayList<Integer> jumlahMenu, double jarakAntar, double totalHarga) {
+    public Order(String idRestaurant, ArrayList<Menu> menus, ArrayList<Integer> jumlahMenu, double jarakAntar, double totalHarga) {
         this.idRestaurant = idRestaurant;
         this.menus = menus;
         this.jumlahMenu = jumlahMenu;
@@ -33,5 +33,13 @@ public class Pesanan {
 
     public double getTotalHarga() {
         return totalHarga;
+    }
+
+    private double hitungTotalHarga(){
+        double total = 0;
+        for (int i = 0; i < menus.size(); i++){
+            total += menus.get(i).getHargaMenu() * jumlahMenu.get(i) + jarakAntar * 5;
+        }
+        return total;
     }
 }

@@ -96,7 +96,7 @@ public class Admin {
                 System.out.print("Masukkan Harga Menu: ");
                 hargaMenu = scanner.next();
 
-                menus.add(new Menu(idMenu, namaMenu, hargaMenu));
+                menus.add(new Menu(idMenu, namaMenu, Integer.parseInt(hargaMenu)));
 
                 System.out.println("====================================");
                 System.out.println("Tambah data menu kembali?");
@@ -122,7 +122,6 @@ public class Admin {
     public void deleteRestaurant() {
         int loopDelete = 1;
 
-
         while (loopDelete == 1) {
             System.out.print("Masukkan ID Restoran yang akan dihapus: ");
             String id = scanner.next();
@@ -147,6 +146,4 @@ public class Admin {
         }
         menuAdmin();
     }
-
-
 }

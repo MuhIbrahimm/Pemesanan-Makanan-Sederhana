@@ -1,23 +1,22 @@
 public class Menu {
     private String idMenu;
     private String namaMenu;
-    private String hargaMenu;
+    private int hargaMenu;
 
-    public Menu(String idMenu, String namaMenu, String hargaMenu) {
+    public Menu(String idMenu, String namaMenu, int hargaMenu) {
         this.idMenu = idMenu;
         this.namaMenu = namaMenu;
         this.hargaMenu = hargaMenu;
     }
 
-    public String getIdMenu() {
-        return idMenu;
+    public Menu(String idMenu, String namaMenu, Integer hargaMenu) {
     }
 
     public String getNamaMenu() {
         return namaMenu;
     }
 
-    public String getHargaMenu() {
+    public int getHargaMenu() {
         return hargaMenu;
     }
 }
