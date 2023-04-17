@@ -36,6 +36,7 @@ public class Order {
     }
 
     private double hitungTotalHarga(){
+        //menghitung total order
         double total = 0;
         for (int i = 0; i < menus.size(); i++){
             total += menus.get(i).getHargaMenu() * jumlahMenu.get(i) + jarakAntar * 5;

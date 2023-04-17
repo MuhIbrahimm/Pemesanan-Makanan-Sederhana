@@ -6,7 +6,7 @@ public class Main {
         System.out.println("====================================");
 
         Login.login();
-
+        //Masuk ke menu login
 
     }
 }

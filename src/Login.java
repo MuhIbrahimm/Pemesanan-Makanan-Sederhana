@@ -8,19 +8,21 @@ public class Login {
         System.out.println("====================================");
         System.out.print("Username : ");
         String username = scanner.nextLine();
+        //Memasukkan Username
         System.out.print("Password : ");
         String password = scanner.nextLine();
+        //Memasukkan Password
         System.out.println("====================================");
 
         if (username.equals("admin") && password.equals("admin")) {
             Admin admin = new Admin();
             admin.menuAdmin();
-            //perintah masuk ke sisi admin
+            //perintah masuk ke menu admin
 
         } else if (username.equals("customer") && password.equals("customer")) {
             Customer customer = new Customer();
             customer.menuCustomer();
-            //perintah masuk ke sisi customer
+            //perintah masuk ke menu customer
 
         } else {
             System.out.println(" Username dan Password tidak sesuai ");
