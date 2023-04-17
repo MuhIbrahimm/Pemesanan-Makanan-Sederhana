@@ -2,10 +2,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Admin {
-    ArrayList<Restaurant> restaurants = new ArrayList<>();
-    Scanner scanner = new Scanner(System.in);
+    static ArrayList<Restaurant> restaurants = new ArrayList<>();
+    static ArrayList<Menu> menus = new ArrayList<>();
+    static Scanner scanner = new Scanner(System.in);
 
-    public void menuAdmin() {
+    public static void menuAdmin() {
 
         System.out.println("\n\n====================================");
         System.out.println("          Menu Utama Admin          ");
@@ -31,15 +32,15 @@ public class Admin {
 
         switch (pilihan) {
             case 1:
-                viewRestaurant();
+                Admin.viewRestaurant(restaurants, menus);
                 //untuk melihat list restaurant
                 break;
             case 2:
-                addRestaurant();
+                addRestaurant(restaurants, menus);
                 //untuk menambahkan restaurant beserta menu di dalamnya
                 break;
             case 3:
-                deleteRestaurant();
+                deleteRestaurant(restaurants, menus);
                 //untuk menghapus restaurant beserta menu di dalamnya
                 break;
             case 4:
@@ -49,7 +50,7 @@ public class Admin {
         }
     }
 
-    public void viewRestaurant() {
+    private static void viewRestaurant(ArrayList<Restaurant> restaurants, ArrayList<Menu> menus) {
         //method untuk melihat restaurant yang ada
         System.out.println("          List Restaurant           ");
         System.out.println("====================================");
@@ -80,9 +81,8 @@ public class Admin {
         menuAdmin();
     }
 
-    public void addRestaurant() {
+    private static void addRestaurant(ArrayList<Restaurant> restaurants, ArrayList<Menu> menus) {
         //method untuk menambahkan restaurant
-        ArrayList<Menu> menus = new ArrayList<>();
         String idRestaurant, namaRestaurant, alamatRestaurant, idMenu, namaMenu, hargaMenu;
         int loopRestaurant = 1, loopMenu = 1;
 
@@ -132,7 +132,7 @@ public class Admin {
         menuAdmin();
     }
 
-    public void deleteRestaurant() {
+    private static void deleteRestaurant(ArrayList<Restaurant> restaurants, ArrayList<Menu> menus) {
         //method untuk menghapus restaurant
         int loopDelete = 1;
 
