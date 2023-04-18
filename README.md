@@ -18,7 +18,11 @@ restaurant, admin akan memberikan ID restaurant, nama restaurant, alamat restaur
 restaurant tersebut. Di dalam menu terdapat ID menu, nama menu, dan harga dari setiap menu.
 
 Sedangkan apabila masuk sebagai user customer, maka akan diberikan menu customer yang berisi hal-hal yang bisa dilakukan
-oleh customer. Hal tersebut seperti membuat pesanan, melihat pesanan, dan kembali ke menu login.
+oleh customer. Hal tersebut seperti membuat pesanan, melihat pesanan, dan kembali ke menu login. Pada membuat pesanan
+customer akan membuat pesanan dari restaurant dan menu yang sudah dibuat oleh admin, dimana pemilihan restaurant
+dilakukan dengan idRestaurant dan menu dengan urutan menu. Lalu pada bagian melihat pesanan user bisa melihat pesanan
+yang sudah dibuat.
 
 UML:
-![!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!](https://user-images.githubusercontent.com/114041689/232830103-af533b23-0ee3-4e2f-83f6-9194b806a894.png)
+
+![!!!!12](https://user-images.githubusercontent.com/114041689/232831925-775deba1-5fa0-4072-9a15-1a2fe527a9aa.png)
