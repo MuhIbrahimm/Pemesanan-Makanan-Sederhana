@@ -1,7 +1,7 @@
 public class Menu {
     private String idMenu;
     private String namaMenu;
-    private int hargaMenu;
+    private double hargaMenu;
 
     public Menu(String idMenu, String namaMenu, int hargaMenu) {
         this.idMenu = idMenu;
@@ -9,14 +9,14 @@ public class Menu {
         this.hargaMenu = hargaMenu;
     }
 
-    public Menu(String idMenu, String namaMenu, Integer hargaMenu) {
+    public String getIdMenu() {
+        return idMenu;
     }
-
     public String getNamaMenu() {
         return namaMenu;
     }
 
-    public int getHargaMenu() {
+    public double getHargaMenu() {
         return hargaMenu;
     }
 }

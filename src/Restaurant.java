@@ -4,7 +4,7 @@ public class Restaurant {
     private String idRestaurant;
     private String namaRestaurant;
     private String alamatRestaurant;
-    private ArrayList<Menu> menus;
+    private ArrayList<Menu> menus = new ArrayList<Menu>();
 
     public Restaurant(String idRestaurant, String namaRestaurant, String alamatRestaurant, ArrayList<Menu> menus) {
         this.idRestaurant = idRestaurant;
@@ -26,6 +26,6 @@ public class Restaurant {
     }
 
     public ArrayList<Menu> getMenus() {
-        return menus;
+        return this.menus;
     }
 }

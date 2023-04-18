@@ -32,16 +32,19 @@ public class Admin {
 
         switch (pilihan) {
             case 1:
-                Admin.viewRestaurant(restaurants, menus);
+                viewRestaurant(restaurants, menus);
                 //untuk melihat list restaurant
+                menuAdmin();
                 break;
             case 2:
                 addRestaurant(restaurants, menus);
                 //untuk menambahkan restaurant beserta menu di dalamnya
+                menuAdmin();
                 break;
             case 3:
                 deleteRestaurant(restaurants, menus);
                 //untuk menghapus restaurant beserta menu di dalamnya
+                menuAdmin();
                 break;
             case 4:
                 Login.login();
@@ -61,6 +64,7 @@ public class Admin {
             System.out.println("Berikan input Untuk Kembali...");
             scanner.next();
             menuAdmin();
+            return; //menambahkan perintah return
         } else{
             for (Restaurant restaurant : restaurants) {
                 //perulangan menampilkan restaurant
@@ -78,18 +82,20 @@ public class Admin {
         System.out.println("Berikan input Untuk Kembali...");
         scanner.next();
         //pause
-        menuAdmin();
     }
+
 
     private static void addRestaurant(ArrayList<Restaurant> restaurants, ArrayList<Menu> menus) {
         //method untuk menambahkan restaurant
-        String idRestaurant, namaRestaurant, alamatRestaurant, idMenu, namaMenu, hargaMenu;
-        int loopRestaurant = 1, loopMenu = 1;
+        String idRestaurant, namaRestaurant, alamatRestaurant, idMenu, namaMenu;
+        int hargaMenu;
+        int loopRestaurant = 1;
 
         while (loopRestaurant == 1) {
             //perulangan untuk mengisi restaurant
             System.out.println("       Menambahkan Restaurant       ");
             System.out.println("====================================");
+            menus = new ArrayList<>();
             System.out.print("Masukkan ID Restaurant: ");
             idRestaurant = scanner.next();
             System.out.print("Masukkan Nama Restaurant: ");
@@ -100,6 +106,8 @@ public class Admin {
             System.out.println("\n====================================");
             System.out.println("   Menambahkan Menu ke Restaurant   ");
             System.out.println("====================================");
+
+            int loopMenu = 1;
             while (loopMenu == 1) {
                 //perulangan untuk mengisi menu
                 System.out.print("Masukkan ID Menu: ");
@@ -107,9 +115,9 @@ public class Admin {
                 System.out.print("Masukkan Nama Menu: ");
                 namaMenu = scanner.next();
                 System.out.print("Masukkan Harga Menu: ");
-                hargaMenu = scanner.next();
+                hargaMenu = scanner.nextInt();
 
-                menus.add(new Menu(idMenu, namaMenu, Integer.parseInt(hargaMenu)));
+                menus.add(new Menu(idMenu, namaMenu, hargaMenu));
 
                 System.out.println("====================================");
                 System.out.println("Tambah data menu kembali?");
@@ -129,7 +137,6 @@ public class Admin {
                 loopMenu = 1;
             }
         }
-        menuAdmin();
     }
 
     private static void deleteRestaurant(ArrayList<Restaurant> restaurants, ArrayList<Menu> menus) {
@@ -137,20 +144,20 @@ public class Admin {
         int loopDelete = 1;
 
         while (loopDelete == 1) {
-            System.out.print("Masukkan ID Restoran yang akan dihapus: ");
+            System.out.print("Masukkan ID restaurant yang akan dihapus: ");
             String id = scanner.next();
             boolean deleted = false;
             for (Restaurant restaurant : restaurants) {
                 if (restaurant.getIdRestaurant().equalsIgnoreCase(id)) {
                     restaurants.remove(restaurant);
                     System.out.println("====================================");
-                    System.out.println("Restoran berhasil dihapus!");
+                    System.out.println("restaurant berhasil dihapus!");
                     deleted = true;
                     break;
                 }
             }
             if (!deleted) {
-                System.out.println("Restoran tidak ditemukan.");
+                System.out.println("restaurant tidak ditemukan.");
             }
             System.out.println("====================================");
             System.out.println("Hapus restaurant kembali?");
@@ -158,6 +165,5 @@ public class Admin {
             loopDelete = scanner.nextInt();
             System.out.println("====================================");
         }
-        menuAdmin();
     }
 }
