@@ -67,7 +67,6 @@ public class Customer {
             System.out.println(counter + ". " + menu.getNamaMenu() + " (Rp " + menu.getHargaMenu() + ")");
             counter++;
         }
-
         System.out.println("====================================");
 
         // Meminta input user untuk memesan makanan
@@ -90,25 +89,30 @@ public class Customer {
                 continue;
             }
             int jumlah = scanner.nextInt();
+            System.out.println("====================================");
 
             // Cari menu makanan berdasarkan id
             ArrayList<Menu> menus = restaurantPilihan.getMenus();
             Menu menuPilihan = menus.get(idMenu - 1);
             // mengambil menu pada indeks idMenu - 1 dari ArrayList menus
             if (menuPilihan == null) {
-                System.out.println("Makanan dengan ID tersebut tidak tersedia.");
+                System.out.println("Makanan dengan urutan tersebut tidak tersedia.");
             } else {
                 menuOrder.add(menuPilihan);
                 quantityList.add(jumlah);
             }
 
-            System.out.print("Pesan lagi (y/n)? ");
-            loopOrder = scanner.next().equalsIgnoreCase("y") ? 1 : 0;
+            System.out.println("Tambah menu kembali?");
+            System.out.println("(1: Ya, 0: Tidak)");
+            loopOrder = scanner.nextInt();
+            System.out.println("====================================");
+
         }
 
         // Meminta input user untuk jarak antar
-        System.out.print("Jarak antar (km): ");
+        System.out.print("Jarak antar (KM): ");
         double jarakAntar = scanner.nextDouble();
+        System.out.println("====================================");
 
         // Menambahkan order ke list order
         Order order = new Order(restaurantPilihan.getIdRestaurant(), menuOrder, quantityList, jarakAntar);
@@ -116,8 +120,11 @@ public class Customer {
 
         double totalBiaya = order.hitungTotalHarga();
         System.out.println("Total Biaya: Rp " + totalBiaya);
+        System.out.println("====================================");
 
-        System.out.println("Pesanan berhasil ditambahkan.");
+        System.out.println("Pesanan berhasil anda ditambahkan");
+        System.out.println("====================================");
+
         System.out.println("Berikan input Untuk Kembali...");
         scanner.next();
     }
@@ -149,6 +156,8 @@ public class Customer {
                 System.out.println("====================================");
             }
         }
+        System.out.println("Berikan input Untuk Kembali...");
+        scanner.next();
     }
 
 
@@ -164,12 +173,10 @@ public class Customer {
         } else {
             for (Restaurant restaurant : restaurants) {
                 System.out.println("====================================");
-                System.out.println("ID Restaurant     : " + restaurant.getIdRestaurant());
                 System.out.println("Nama Restaurant   : " + restaurant.getNamaRestaurant());
                 System.out.println("Alamat Restaurant : " + restaurant.getAlamatRestaurant());
                 System.out.println("====================================");
             }
         }
     }
-
 }

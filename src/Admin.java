@@ -157,7 +157,7 @@ public class Admin {
                 }
             }
             if (!deleted) {
-                System.out.println("restaurant tidak ditemukan.");
+                System.out.println("restaurant tidak ditemukan");
             }
             System.out.println("====================================");
             System.out.println("Hapus restaurant kembali?");

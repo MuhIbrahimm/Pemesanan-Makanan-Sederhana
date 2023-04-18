@@ -8,6 +8,11 @@ public class Order {
     private double totalHarga;
 
     public Order(String idRestaurant, ArrayList<Menu> menuOrder, ArrayList<Integer> quantityList, double jarakAntar) {
+        this.idRestaurant = idRestaurant;
+        this.menus = menuOrder;
+        this.jumlahMenu = quantityList;
+        this.jarakAntar = jarakAntar;
+        this.totalHarga = hitungTotalHarga();
     }
 
     public String getIdRestaurant() {
@@ -34,7 +39,7 @@ public class Order {
         //menghitung total order
         double total = 0;
         for (int i = 0; i < menus.size(); i++){
-            total += menus.get(i).getHargaMenu() * jumlahMenu.get(i) + jarakAntar * 5;
+            total += menus.get(i).getHargaMenu() * jumlahMenu.get(i) + jarakAntar * 5000;
         }
         return total;
     }
