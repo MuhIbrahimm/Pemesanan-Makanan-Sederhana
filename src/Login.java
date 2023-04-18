@@ -1,8 +1,7 @@
 import java.util.Scanner;
-
 public class Login {
+    static Scanner scanner = new Scanner(System.in);
     public static void login() {
-        Scanner scanner = new Scanner(System.in);
 
         System.out.println("             Menu Login             ");
         System.out.println("====================================");

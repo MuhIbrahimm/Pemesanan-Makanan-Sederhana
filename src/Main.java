@@ -7,6 +7,5 @@ public class Main {
 
         Login.login();
         //Masuk ke menu login
-
     }
 }

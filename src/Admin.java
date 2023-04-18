@@ -1,11 +1,9 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class Admin {
     static ArrayList<Restaurant> restaurants = new ArrayList<>();
     static ArrayList<Menu> menus = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
-
     public static void menuAdmin() {
 
         System.out.println("\n\n====================================");
@@ -16,36 +14,44 @@ public class Admin {
         System.out.println("   3. Hapus Restaurant              ");
         System.out.println("   4. Kembali ke Login              ");
         System.out.println("====================================");
+
         int pilihan;
+
         do {
             System.out.print("Pilih menu: ");
             pilihan = scanner.nextInt();
+
             if (pilihan < 1 || pilihan > 4){
                 System.out.println("Pilihan tersebut tidak ada di menu");
                 System.out.println("Silakan pilih menu kembali");
                 //output apabila input yang diberikan tidak sesuai
                 System.out.println("====================================");
             }
+
         } while (pilihan < 1 || pilihan > 4);
         //perulangan apabila input yang diberikan tidak sesuai
         System.out.println("====================================");
 
         switch (pilihan) {
+
             case 1:
                 viewRestaurant(restaurants, menus);
                 //untuk melihat list restaurant
                 menuAdmin();
                 break;
+
             case 2:
                 addRestaurant(restaurants, menus);
                 //untuk menambahkan restaurant beserta menu di dalamnya
                 menuAdmin();
                 break;
+
             case 3:
                 deleteRestaurant(restaurants, menus);
                 //untuk menghapus restaurant beserta menu di dalamnya
                 menuAdmin();
                 break;
+
             case 4:
                 Login.login();
                 //kembali ke menu login
@@ -55,8 +61,10 @@ public class Admin {
 
     private static void viewRestaurant(ArrayList<Restaurant> restaurants, ArrayList<Menu> menus) {
         //method untuk melihat restaurant yang ada
+
         System.out.println("          List Restaurant           ");
         System.out.println("====================================");
+
         if (restaurants.isEmpty()) {
             System.out.println("    List Restaurant Masih Kosong    ");
             System.out.println("Tambahkan Restaurant Terlebih Dahulu");
@@ -65,6 +73,7 @@ public class Admin {
             scanner.next();
             menuAdmin();
             return; //menambahkan perintah return
+
         } else{
             for (Restaurant restaurant : restaurants) {
                 //perulangan menampilkan restaurant
@@ -72,11 +81,12 @@ public class Admin {
                 System.out.println("Nama: " + restaurant.getNamaRestaurant());
                 System.out.println("Alamat: " + restaurant.getAlamatRestaurant());
                 System.out.println("Menu: ");
+
                 for (Menu menu : restaurant.getMenus()) {
                     //perulangan menampilkan menu dalam restaurant
                     System.out.println("- " + menu.getNamaMenu() + " (Rp " + menu.getHargaMenu() + ")");
                 }
-                System.out.println("====================================");
+            System.out.println("====================================");
             }
         }
         System.out.println("Berikan input Untuk Kembali...");
@@ -84,9 +94,9 @@ public class Admin {
         //pause
     }
 
-
     private static void addRestaurant(ArrayList<Restaurant> restaurants, ArrayList<Menu> menus) {
         //method untuk menambahkan restaurant
+
         String idRestaurant, namaRestaurant, alamatRestaurant, idMenu, namaMenu;
         int hargaMenu;
         int loopRestaurant = 1;
@@ -95,7 +105,9 @@ public class Admin {
             //perulangan untuk mengisi restaurant
             System.out.println("       Menambahkan Restaurant       ");
             System.out.println("====================================");
+
             menus = new ArrayList<>();
+
             System.out.print("Masukkan ID Restaurant: ");
             idRestaurant = scanner.next();
             System.out.print("Masukkan Nama Restaurant: ");
@@ -141,12 +153,15 @@ public class Admin {
 
     private static void deleteRestaurant(ArrayList<Restaurant> restaurants, ArrayList<Menu> menus) {
         //method untuk menghapus restaurant
+
         int loopDelete = 1;
 
         while (loopDelete == 1) {
             System.out.print("Masukkan ID restaurant yang akan dihapus: ");
             String id = scanner.next();
+
             boolean deleted = false;
+
             for (Restaurant restaurant : restaurants) {
                 if (restaurant.getIdRestaurant().equalsIgnoreCase(id)) {
                     restaurants.remove(restaurant);
@@ -156,9 +171,11 @@ public class Admin {
                     break;
                 }
             }
+
             if (!deleted) {
                 System.out.println("restaurant tidak ditemukan");
             }
+
             System.out.println("====================================");
             System.out.println("Hapus restaurant kembali?");
             System.out.println("(1: Ya, 0: Tidak)");
