@@ -19,3 +19,6 @@ restaurant tersebut. Di dalam menu terdapat ID menu, nama menu, dan harga dari s
 
 Sedangkan apabila masuk sebagai user customer, maka akan diberikan menu customer yang berisi hal-hal yang bisa dilakukan
 oleh customer. Hal tersebut seperti membuat pesanan, melihat pesanan, dan kembali ke menu login.
+
+UML:
+![!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!](https://user-images.githubusercontent.com/114041689/232830103-af533b23-0ee3-4e2f-83f6-9194b806a894.png)
